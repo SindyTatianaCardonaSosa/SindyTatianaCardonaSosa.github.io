@@ -1,58 +1,42 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
+<!-- saved from url=(0064)file:///C:/Users/Sindy%20Sosa/Downloads/pruebadirecta%20(1).html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <title>APOPHIS</title>
     <style>* { padding: 0; margin: 0; }</style>
-    <script src="js/phaser.js"></script>
+    <script src="file:///C:/Users/Sindy%20Sosa/Downloads/js/phaser.js"></script>
 </head>
 <body>
 <script>
 
-   var config = {
+
+        var config = {
             type: Phaser.AUTO,
             width: 800,
             height: 600,
-            physics: {
-                default:'arcade',
-                arcade: {
-                    gravity: { y: 300 },
-                    debug:false
-                        }
-                      };
-                
-
             scene: {
                 preload: preload,
                 create: create,
                 update: update
-                 }
-};
+            }
+        };
+
+var game = new Phaser.Game(config);
 
 
-      var player;
-      var stars;
-      var platforms;
-      var cursors;
+    function preload() {
 
-      var game = new Phaser.Game(config);   
+    this.load.image ('fondo','assets/fondo.png');
+
+                        };
+
+    function create() {
+
+       this.add.image(400, 300, 'fondo');
 
 
-
-    function preload ()
-    { 
-      this.load.image('fondo','assets/fondo.png');
     };
-
-
-    function create ()
-    { this.add.image(300,400,'fondo');
-    
-    };
-
-    function update ()
-    {
-    };
+    function update() {};
 </script>
-</body>
-</html>
+
+</body></html>
