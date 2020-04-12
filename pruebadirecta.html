@@ -24,13 +24,15 @@
 	            gravity: { y: 300 },
 	            debug: false
 	        }
-	    };
+	    }
             scene: {
                 preload: preload,
                 create: create,
                 update: update
             }
         };
+
+
 
 var game = new Phaser.Game(config);
 
@@ -45,10 +47,16 @@ var game = new Phaser.Game(config);
 
                         };
 
+
+  	var platforms;
+
     function create() {
 
        this.add.image(540,-50,'fondo');
-       this.add.image(540,300,'plataformas');
+       
+       platforms=this.physics.add.staticGroup();
+       platforms.create(400,568,'ground').setScale(2).refreshbody();
+
        
 	    
        
