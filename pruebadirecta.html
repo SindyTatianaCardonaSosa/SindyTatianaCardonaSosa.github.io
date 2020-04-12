@@ -43,13 +43,7 @@ var game = new Phaser.Game(config);
        this.add.image(540,-50,'fondo');
        this.add.image(540,300,'plataformas');
        this.map= this.add.tilemap('mapa');
-	      var platform3= this.map.addTilesetImage('platform3', 'plataformas');
-
-	      Capadepatrones1=this.map.createDydamicLayer('terreno', platform3);
-	      ground.setCollisionByProperty({ground:true});
-
-	      jugador = this.physics.add.sprite(300,2,'personaje_posiciones', jugador.setSize(64,64);
-	      this.physics.add.collider(jugador,ground);
+	    
        
       		    };
 
