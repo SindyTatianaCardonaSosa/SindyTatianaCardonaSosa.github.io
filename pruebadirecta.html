@@ -22,14 +22,15 @@
 		        default:'arcade',
 		        arcade: {
 			            gravity: { y:300 },
-			            debug:false}
+			            debug:false
+			        	}
 	       			 },
 	    
             scene: {
                 preload: preload,
                 create: create,
                 update: update
-            }
+           		 }
         };
 
 
@@ -40,8 +41,6 @@ var game = new Phaser.Game(config);
     function preload() {
 
       this.load.image('fondo','assets/fondo.png');
-      this.load.image('plataformas','assets/platform3.png');
-      this.load.tilemapTiledJSON('mapa', 'assets/Plataforma_apophis.json');
       this.load.spritesheet('personaje_posiciones','assets/personaje_posiciones.png');
       this.load.spritesheet('armas_protagonista','assets/armas_protagonista.png');
 
@@ -56,7 +55,7 @@ var game = new Phaser.Game(config);
        
       	platforms=this.physics.add.staticGroup();
 
-	    platforms.create(400,568,'ground').setScale(2).refreshBody();
+	    platforms.create(400, 568,'ground').setScale(2).refreshBody();
 
 	    platforms.create(600,400,'ground');
 	    platforms.create(50,250,'ground');
