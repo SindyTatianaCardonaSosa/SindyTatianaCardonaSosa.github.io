@@ -39,13 +39,7 @@ var game = new Phaser.Game(config);
 
        this.add.image(400, 300, 'fondo');
        this.map= this.add.tilemap('mapa');
-      		var tileset= this.map.addTilesetImage('platform3', 'plataformas');
-
-      terreny=this.map.createDydamicLayer('terreny',tileset);
-      terreny.setCollisionByProperty({collider:true});
-
-      jugador=this.physics.add.sprite(300,2, 'personaje_posiciones', jugador.setSize(64,64);
-      this.physics.add.collider(jugador,terreny);
+      		
 
     };
     function update() {};
