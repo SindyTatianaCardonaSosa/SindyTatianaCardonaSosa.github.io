@@ -30,14 +30,25 @@ var game = new Phaser.Game(config);
 
     function preload() {
 
-    this.load.image('fondo','assets/fondo.png');
-    
+      this.load.image('fondo','assets/fondo.png');
+      this.load.image('plataformas','assets/platform3.png');
+      this.load.tilemapTiledJSON('mapa', 'assets/Plataforma_apophis.json');
+      this.load.spritesheet('personaje_posiciones','assets/personaje_posiciones.png');
+      this.load.spritesheet('armas_protagonista','assets/armas_protagonista.png');
 
                         };
 
     function create() {
 
        this.add.image(540,-50,'fondo');
+       this.map= this.add.tilemap('mapa');
+	      var platform3= this.map.addTilesetImage('platform3', 'plataformas');
+
+	      Capadepatrones1=this.map.createDydamicLayer('terreno', platform3);
+	      terreny.setCollisionByProperty({gound:true});
+
+	      jugador = this.physics.add.sprite(300,2, 'personaje_posiciones', jugador.setSize(64,64);
+	      this.physics.add.collider(jugador,ground);
        
       		    };
 
