@@ -36,25 +36,25 @@
 
     function preload ()
     {
-        this.load.image('fondo', 'assets/fondo.png');
-        this.load.image('ground', 'assets/platform3.png');
-        this.load.spritesheet('armas_protagonista', 'assets/armas_protagonista.png');
-        this.load.spritesheet('hipster', 'assets/personaje_posiciones.png', { frameWidth: 64, frameHeight: 64 });
+        this.load.image('fondo','assets/fondo.png');
+        this.load.image('ground','assets/platform3.png');
+        this.load.spritesheet('armas_protagonista','assets/armas_protagonista.png');
+        this.load.spritesheet('hipster','assets/personaje_posiciones.png', { frameWidth:64, frameHeight:64 });
     }
 
     var platforms;
 
     function create ()
     {
-        this.add.image(400, 300, 'fondo');
+        this.add.image(400,300,'fondo');
 
         platforms = this.physics.add.staticGroup();
 
-        platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+        platforms.create(400,568,'ground').setScale(2).refreshBody();
 
-        platforms.create(600, 400, 'ground');
-        platforms.create(50, 250, 'ground');
-        platforms.create(750, 220, 'ground');
+        platforms.create(600,400,'ground');
+        platforms.create(50,250,'ground');
+        platforms.create(750,220,'ground');
     }
 
     function update ()
